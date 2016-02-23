@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Ribbon - jQuery EasyUI</title>
+    
+
+    <link href="easyui.css" rel="stylesheet" />
+
+	<link rel="stylesheet" type="text/css" href="http://www.w3cschool.cc/try/jeasyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="ribbon.css">
+	<link rel="stylesheet" type="text/css" href="ribbon-icon.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+	<script type="text/javascript" src="http://www.w3cschool.cc/try/jeasyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="jquery.ribbon.js"></script>
+	<script type="text/javascript">
+		var data = {
+			selected:0,
+			tabs:[{
+				title:'我的工作',
+				groups:[{
+					title:'',
+					tools:[{
+						name:'picture',
+						text:'Picture',
+						iconCls:'icon-picture-large',
+						iconAlign:'top',
+						size:'large'
+					},{
+						name:'clipart',
+						text:'Clip Art',
+						iconCls:'icon-clipart-large',
+						iconAlign:'top',
+						size:'large'
+					},{
+						type:'menubutton',
+						name:'shapes',
+						text:'Shapes',
+						iconCls:'icon-shapes-large',
+						iconAlign:'top',
+						size:'large'
+					},{
+						name:'smartart',
+						text:'SmartArt',
+						iconCls:'icon-smartart-large',
+						iconAlign:'top',
+						size:'large'
+					},{
+						name:'chart',
+						text:'Chart',
+						iconCls:'icon-chart-large',
+						iconAlign:'top',
+						size:'large'
+					}]
+				}]
+			},
+			{
+			    title: '房产管理',
+			    groups: [{
+			        title: '',
+			        tools: [{
+			            name: 'picture2',
+			            text: 'Picture2',
+			            iconCls: 'icon-picture-large',
+			            iconAlign: 'top',
+			            size: 'large'
+			        }, {
+			            name: 'clipart2',
+			            text: 'Clip Art2',
+			            iconCls: 'icon-clipart-large',
+			            iconAlign: 'top',
+			            size: 'large'
+			        }, {
+			            type: 'menubutton',
+			            name: 'shapes2',
+			            text: 'Shapes2',
+			            iconCls: 'icon-shapes-large',
+			            iconAlign: 'top',
+			            size: 'large'
+			        }, {
+			            name: 'smartart2',
+			            text: 'SmartArt2',
+			            iconCls: 'icon-smartart-large',
+			            iconAlign: 'top',
+			            size: 'large'
+			        }, {
+			            name: 'chart2',
+			            text: 'Chart2',
+			            iconCls: 'icon-chart-large',
+			            iconAlign: 'top',
+			            size: 'large'
+			        }]
+			    }]
+			}]
+		};
+		
+		$(function () {
+
+		    var a = $('#rr').ribbon({
+		        data: data,
+                onClick:aa
+		    });
+		   
+			 function aa(name, target)
+			{
+                alert(name)
+			};
+		});
+	</script>
+</head>
+<body>
+	<h1>Ribbon</h1>
+	<div id="rr" style="width:700px;">
+	</div>
+
+</body>
+</html>
